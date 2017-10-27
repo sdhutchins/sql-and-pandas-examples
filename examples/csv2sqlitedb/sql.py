@@ -2,7 +2,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-# -----------------------------------------------------------------------------
 # Create a sqlite database from a csv file.
 
 # Unix/Mac - 4 initial slashes in total
@@ -14,9 +13,3 @@ engine = create_engine('sqlite:///C:\\Users\\shutchins2\\Desktop\\sqlpandas\\tes
 csvfile = 'MAFV3.3.csv'
 df = pd.read_csv(csvfile)
 df.to_sql(name='test', con=engine, if_exists='append', index=False)
-
-
-# -----------------------------------------------------------------------------
-
-# Read a sqlite database into pandas
-
